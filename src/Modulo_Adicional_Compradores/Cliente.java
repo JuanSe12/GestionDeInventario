@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Modulo_Acicional_Compradores;
+package Modulo_Adicional_Compradores;
 
 /**
  *
