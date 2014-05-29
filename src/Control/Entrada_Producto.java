@@ -11,9 +11,19 @@ package Control;
  * @author adsi
  */
 public class Entrada_Producto {
+   boolean Tipo_Entrada;
    int nrm_producto_e;
    String fch_entrada; 
 
+   
+    public boolean isTipo_Entrada() {
+        return Tipo_Entrada;
+    }
+
+    public void setTipo_Entrada(boolean Tipo_Entrada) {
+        this.Tipo_Entrada = Tipo_Entrada;
+    }
+    
     public int getNrm_producto_e() {
         return nrm_producto_e;
     }

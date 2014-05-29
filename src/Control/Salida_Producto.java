@@ -11,8 +11,17 @@ package Control;
  * @author adsi
  */
 public class Salida_Producto {
+    boolean Tipo_Salida;
     int nrm_producto_s;
     String fch_salida;
+    
+    public boolean isTipo_Salida() {
+        return Tipo_Salida;
+    }
+
+    public void setTipo_Salida(boolean Tipo_Salida) {
+        this.Tipo_Salida = Tipo_Salida;
+    }
     
     public int getNrm_producto_s() {
         return nrm_producto_s;
