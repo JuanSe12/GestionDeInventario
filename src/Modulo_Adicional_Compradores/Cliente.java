@@ -15,6 +15,11 @@ public class Cliente {
     String Apellido;
     int Cedula;
     boolean Modo_Pago;
+    //borrar de aca para abajo
+    int a;
+    int b;
+    int c;
+    //borrar esto
 
     public String getNombre() {
         return nombre;
