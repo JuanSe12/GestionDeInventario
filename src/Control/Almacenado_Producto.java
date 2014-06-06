@@ -11,28 +11,41 @@ package Control;
  * @author adsi
  */
 public class Almacenado_Producto {
-    String nom_producto;
-    int nrm_productos_a;
+    int Referencia;
+    int Nrm_productos_a;
+    int conteo_mensual;
 
-    public String getNom_producto() {
-        return nom_producto;
+    public int getReferencia() {
+        return Referencia;
     }
 
-    public void setNom_producto(String nom_producto) {
-        this.nom_producto = nom_producto;
+    public void setReferencia(int Referencia) {
+        this.Referencia = Referencia;
     }
 
     public int getNrm_productos_a() {
-        return nrm_productos_a;
+        return Nrm_productos_a;
     }
 
-    public void setNrm_productos_a(int nrm_productos_a) {
-        this.nrm_productos_a = nrm_productos_a;
+    public void setNrm_productos_a(int Nrm_productos_a) {
+        this.Nrm_productos_a = Nrm_productos_a;
     }
+
+    public int getConteo_mensual() {
+        return conteo_mensual;
+    }
+
+    public void setConteo_mensual(int conteo_mensual) {
+        this.conteo_mensual = conteo_mensual;
+    }
+
     public void ingresar_producto(){
         
     }
     public void retirar_producto(){
+        
+    }
+    public void Mostrar_almacenado(){
         
     }
 }
