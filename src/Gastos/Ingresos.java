@@ -13,6 +13,7 @@ package Gastos;
 public class Ingresos {
     int ingresos_salida_productos;
     int ingresos_entrada_productos;
+    int Ganancias_Empresa;
 
     public int getIngresos_salida_productos() {
         return ingresos_salida_productos;
@@ -29,6 +30,15 @@ public class Ingresos {
     public void setIngresos_entrada_productos(int ingresos_entrada_productos) {
         this.ingresos_entrada_productos = ingresos_entrada_productos;
     }
+    
+    public int getGanancias_Empresa() {
+        return Ganancias_Empresa;
+    }
+
+    public void setGanancias_Empresa(int Ganancias_Empresa) {
+        this.Ganancias_Empresa = Ganancias_Empresa;
+    }
+    
     public void calculo_Inprodcutos_salida(){
         
     }

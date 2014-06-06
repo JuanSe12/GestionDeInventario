@@ -12,7 +12,9 @@ package Control;
  */
 public class Entrada_Producto {
    boolean Tipo_Entrada;
+   String Nombre;
    int nrm_producto_e;
+   int Precio;
    String fch_entrada; 
 
    
@@ -24,6 +26,14 @@ public class Entrada_Producto {
         this.Tipo_Entrada = Tipo_Entrada;
     }
     
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
     public int getNrm_producto_e() {
         return nrm_producto_e;
     }
@@ -31,7 +41,15 @@ public class Entrada_Producto {
     public void setNrm_producto_e(int nrm_producto_e) {
         this.nrm_producto_e = nrm_producto_e;
     }
+    
+    public int getPrecio() {
+        return Precio;
+    }
 
+    public void setPrecio(int Precio) {
+        this.Precio = Precio;
+    }
+    
     public String getFch_entrada() {
         return fch_entrada;
     }
@@ -39,6 +57,7 @@ public class Entrada_Producto {
     public void setFch_entrada(String fch_entrada) {
         this.fch_entrada = fch_entrada;
     }
+    
     public void registrar_entrada(){
         
     }

@@ -13,6 +13,7 @@ package Control;
 public class Almacenado_Producto {
     int Referencia;
     int Nrm_productos_a;
+    int Valor_Producto;
     int conteo_mensual;
 
     public int getReferencia() {
@@ -31,6 +32,14 @@ public class Almacenado_Producto {
         this.Nrm_productos_a = Nrm_productos_a;
     }
 
+    public int getValor_Producto() {
+        return Valor_Producto;
+    }
+
+    public void setValor_Producto(int Valor_Producto) {
+        this.Valor_Producto = Valor_Producto;
+    }
+    
     public int getConteo_mensual() {
         return conteo_mensual;
     }

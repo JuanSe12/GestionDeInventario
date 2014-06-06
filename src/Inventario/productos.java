@@ -15,7 +15,6 @@ public class productos {
     String tipo_producto;
     String marca_producto;
     int valor_producto_neto;
-    int valor_producto_venta;
     int porcentaje_ganancia;
     int cnt_producto;
 
@@ -51,14 +50,6 @@ public class productos {
         this.valor_producto_neto = valor_producto_neto;
     }
 
-    public int getValor_producto_venta() {
-        return valor_producto_venta;
-    }
-
-    public void setValor_producto_venta(int valor_producto_venta) {
-        this.valor_producto_venta = valor_producto_venta;
-    }
-
     public int getPorcentaje_ganancia() {
         return porcentaje_ganancia;
     }
@@ -85,5 +76,4 @@ public class productos {
     public void eliminar_producto(){
         
     }
-    
 }

@@ -11,8 +11,18 @@ package Control;
  * @author adsi
  */
 public class Devolucion_Producto {
+    int referencia;
     int nrm_producto_d;
     String fch_devolucion;
+    String Descripcion;
+
+    public int getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(int referencia) {
+        this.referencia = referencia;
+    }
 
     public int getNrm_producto_d() {
         return nrm_producto_d;
@@ -29,6 +39,15 @@ public class Devolucion_Producto {
     public void setFch_devolucion(String fch_devolucion) {
         this.fch_devolucion = fch_devolucion;
     }
+    
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
+    }
+    
     public void registrar_devolucion(){
         
     }

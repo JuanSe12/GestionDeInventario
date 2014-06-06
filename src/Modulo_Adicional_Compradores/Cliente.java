@@ -14,8 +14,10 @@ public class Cliente {
     String nombre;
     String Apellido;
     int Cedula;
+    String Direccion;
     boolean Modo_Pago;
-    
+    String Ciudad;
+    String Email;
 
     public String getNombre() {
         return nombre;
@@ -40,7 +42,15 @@ public class Cliente {
     public void setCedula(int Cedula) {
         this.Cedula = Cedula;
     }
+    
+    public String getDireccion() {
+        return Direccion;
+    }
 
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
+    }
+    
     public boolean isModo_Pago() {
         return Modo_Pago;
     }
@@ -49,6 +59,22 @@ public class Cliente {
         this.Modo_Pago = Modo_Pago;
     }
     
+    public String getCiudad() {
+        return Ciudad;
+    }
+
+    public void setCiudad(String Ciudad) {
+        this.Ciudad = Ciudad;
+    }
+    
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
     public void Productos_Comprados(){
         
     }
