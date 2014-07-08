@@ -17,6 +17,7 @@ public class productos {
     int valor_producto_neto;
     int porcentaje_ganancia;
     int cnt_producto;
+    int cliente_id;
 
     public long getRefencia() {
         return refencia;
@@ -65,7 +66,14 @@ public class productos {
     public void setCnt_producto(int cnt_producto) {
         this.cnt_producto = cnt_producto;
     }
-    
+
+    public int getCliente_id() {
+        return cliente_id;
+    }
+
+    public void setCliente_id(int cliente_id) {
+        this.cliente_id = cliente_id;
+    }
     
     public void Guardar_producto(){
         

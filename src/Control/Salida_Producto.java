@@ -12,12 +12,12 @@ package Control;
  */
 public class Salida_Producto {
     boolean Tipo_Salida;
-    int referencia;
-    int nrm_producto_s;
-    int Precio_total;
+    int producto_id;
+    int nrm_producto_salida;
+    int precio_total;
     String fch_salida;
-    String Cliente_Nombre;
-    
+    int cliente_id;
+
     public boolean isTipo_Salida() {
         return Tipo_Salida;
     }
@@ -25,31 +25,31 @@ public class Salida_Producto {
     public void setTipo_Salida(boolean Tipo_Salida) {
         this.Tipo_Salida = Tipo_Salida;
     }
-    
-    public int getReferencia() {
-        return referencia;
+
+    public int getProducto_id() {
+        return producto_id;
     }
 
-    public void setReferencia(int referencia) {
-        this.referencia = referencia;
-    }
-    
-    public int getNrm_producto_s() {
-        return nrm_producto_s;
+    public void setProducto_id(int producto_id) {
+        this.producto_id = producto_id;
     }
 
-    public void setNrm_producto_s(int nrm_producto_s) {
-        this.nrm_producto_s = nrm_producto_s;
+    public int getNrm_producto_salida() {
+        return nrm_producto_salida;
+    }
+
+    public void setNrm_producto_salida(int nrm_producto_salida) {
+        this.nrm_producto_salida = nrm_producto_salida;
     }
 
     public int getPrecio_total() {
-        return Precio_total;
+        return precio_total;
     }
 
-    public void setPrecio_total(int Precio_total) {
-        this.Precio_total = Precio_total;
+    public void setPrecio_total(int precio_total) {
+        this.precio_total = precio_total;
     }
-    
+
     public String getFch_salida() {
         return fch_salida;
     }
@@ -57,13 +57,17 @@ public class Salida_Producto {
     public void setFch_salida(String fch_salida) {
         this.fch_salida = fch_salida;
     }
-    
-    public String getCliente_Nombre() {
-        return Cliente_Nombre;
+
+    public int getCliente_id() {
+        return cliente_id;
     }
 
-    public void setCliente_Nombre(String Cliente_Nombre) {
-        this.Cliente_Nombre = Cliente_Nombre;
+    public void setCliente_id(int cliente_id) {
+        this.cliente_id = cliente_id;
+    }
+    
+    public void setcliente_id(int cliente_id) {
+        this.cliente_id = cliente_id;
     }
     public void registrar_salida(){
         

@@ -11,25 +11,25 @@ package Control;
  * @author adsi
  */
 public class Devolucion_Producto {
-    int referencia;
-    int nrm_producto_d;
+    int producto_id;
+    int nrm_producto_devuelto;
     String fch_devolucion;
     String Descripcion;
 
-    public int getReferencia() {
-        return referencia;
+    public int getProducto_id() {
+        return producto_id;
     }
 
-    public void setReferencia(int referencia) {
-        this.referencia = referencia;
+    public void setProducto_id(int producto_id) {
+        this.producto_id = producto_id;
     }
 
-    public int getNrm_producto_d() {
-        return nrm_producto_d;
+    public int getNrm_producto_devuelto() {
+        return nrm_producto_devuelto;
     }
 
-    public void setNrm_producto_d(int nrm_producto_d) {
-        this.nrm_producto_d = nrm_producto_d;
+    public void setNrm_producto_devuelto(int nrm_producto_devuelto) {
+        this.nrm_producto_devuelto = nrm_producto_devuelto;
     }
 
     public String getFch_devolucion() {
@@ -39,7 +39,7 @@ public class Devolucion_Producto {
     public void setFch_devolucion(String fch_devolucion) {
         this.fch_devolucion = fch_devolucion;
     }
-    
+
     public String getDescripcion() {
         return Descripcion;
     }
@@ -47,7 +47,7 @@ public class Devolucion_Producto {
     public void setDescripcion(String Descripcion) {
         this.Descripcion = Descripcion;
     }
-    
+
     public void registrar_devolucion(){
         
     }

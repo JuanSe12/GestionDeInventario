@@ -11,45 +11,44 @@ package Control;
  * @author adsi
  */
 public class Entrada_Producto {
-   boolean Tipo_Entrada;
-   String Nombre;
-   int nrm_producto_e;
-   int Precio;
+   boolean tipo_Entrada;
+   String nombre_producto;
+   int nrm_producto_entrada;
+   int precio;
    String fch_entrada; 
 
-   
     public boolean isTipo_Entrada() {
-        return Tipo_Entrada;
+        return tipo_Entrada;
     }
 
-    public void setTipo_Entrada(boolean Tipo_Entrada) {
-        this.Tipo_Entrada = Tipo_Entrada;
-    }
-    
-    public String getNombre() {
-        return Nombre;
+    public void setTipo_Entrada(boolean tipo_Entrada) {
+        this.tipo_Entrada = tipo_Entrada;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public String getNombre_producto() {
+        return nombre_producto;
     }
 
-    public int getNrm_producto_e() {
-        return nrm_producto_e;
+    public void setNombre_producto(String nombre_producto) {
+        this.nombre_producto = nombre_producto;
     }
 
-    public void setNrm_producto_e(int nrm_producto_e) {
-        this.nrm_producto_e = nrm_producto_e;
+    public int getNrm_producto_entrada() {
+        return nrm_producto_entrada;
     }
-    
+
+    public void setNrm_producto_entrada(int nrm_producto_entrada) {
+        this.nrm_producto_entrada = nrm_producto_entrada;
+    }
+
     public int getPrecio() {
-        return Precio;
+        return precio;
     }
 
-    public void setPrecio(int Precio) {
-        this.Precio = Precio;
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
-    
+
     public String getFch_entrada() {
         return fch_entrada;
     }
@@ -57,7 +56,7 @@ public class Entrada_Producto {
     public void setFch_entrada(String fch_entrada) {
         this.fch_entrada = fch_entrada;
     }
-    
+
     public void registrar_entrada(){
         
     }

@@ -18,6 +18,7 @@ public class Cliente {
     boolean Modo_Pago;
     String Ciudad;
     String Email;
+    
 
     public String getNombre() {
         return nombre;

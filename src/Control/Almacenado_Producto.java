@@ -11,35 +11,35 @@ package Control;
  * @author adsi
  */
 public class Almacenado_Producto {
-    int Referencia;
-    int Nrm_productos_a;
-    int Valor_Producto;
+    int producto_id;
+    int nrm_productos_almacenados;
+    int valor_Producto;
     int conteo_mensual;
 
-    public int getReferencia() {
-        return Referencia;
+    public int getProducto_id() {
+        return producto_id;
     }
 
-    public void setReferencia(int Referencia) {
-        this.Referencia = Referencia;
+    public void setProducto_id(int producto_id) {
+        this.producto_id = producto_id;
     }
 
-    public int getNrm_productos_a() {
-        return Nrm_productos_a;
+    public int getNrm_productos_almacenados() {
+        return nrm_productos_almacenados;
     }
 
-    public void setNrm_productos_a(int Nrm_productos_a) {
-        this.Nrm_productos_a = Nrm_productos_a;
+    public void setNrm_productos_almacenados(int nrm_productos_almacenados) {
+        this.nrm_productos_almacenados = nrm_productos_almacenados;
     }
 
     public int getValor_Producto() {
-        return Valor_Producto;
+        return valor_Producto;
     }
 
-    public void setValor_Producto(int Valor_Producto) {
-        this.Valor_Producto = Valor_Producto;
+    public void setValor_Producto(int valor_Producto) {
+        this.valor_Producto = valor_Producto;
     }
-    
+
     public int getConteo_mensual() {
         return conteo_mensual;
     }
@@ -56,5 +56,8 @@ public class Almacenado_Producto {
     }
     public void Mostrar_almacenado(){
         
+    }
+    public void Contar_productos_almacenados(){
+    
     }
 }
