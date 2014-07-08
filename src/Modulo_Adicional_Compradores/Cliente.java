@@ -18,7 +18,7 @@ public class Cliente {
     boolean Modo_Pago;
     String Ciudad;
     String Email;
-    
+    int telefono;
 
     public String getNombre() {
         return nombre;
@@ -75,7 +75,15 @@ public class Cliente {
     public void setEmail(String Email) {
         this.Email = Email;
     }
+    
+    public int getTelefono() {
+        return telefono;
+    }
 
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
     public void Productos_Comprados(){
         
     }
