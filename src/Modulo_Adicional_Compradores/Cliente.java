@@ -12,12 +12,12 @@ package Modulo_Adicional_Compradores;
  */
 public class Cliente {
     String nombre;
-    String Apellido;
-    int Cedula;
-    String Direccion;
-    boolean Modo_Pago;
-    String Ciudad;
-    String Email;
+    String apellido;
+    int cedula;
+    String direccion;
+    boolean modo_Pago;
+    String ciudad;
+    String email;
     int telefono;
 
     public String getNombre() {
@@ -29,53 +29,53 @@ public class Cliente {
     }
 
     public String getApellido() {
-        return Apellido;
+        return apellido;
     }
 
-    public void setApellido(String Apellido) {
-        this.Apellido = Apellido;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public int getCedula() {
-        return Cedula;
+        return cedula;
     }
 
-    public void setCedula(int Cedula) {
-        this.Cedula = Cedula;
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
     }
-    
+
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
-    
+
     public boolean isModo_Pago() {
-        return Modo_Pago;
+        return modo_Pago;
     }
 
-    public void setModo_Pago(boolean Modo_Pago) {
-        this.Modo_Pago = Modo_Pago;
+    public void setModo_Pago(boolean modo_Pago) {
+        this.modo_Pago = modo_Pago;
     }
-    
+
     public String getCiudad() {
-        return Ciudad;
+        return ciudad;
     }
 
-    public void setCiudad(String Ciudad) {
-        this.Ciudad = Ciudad;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
-    
+
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    
+
     public int getTelefono() {
         return telefono;
     }
@@ -83,7 +83,7 @@ public class Cliente {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
+
     public void Productos_Comprados(){
         
     }
