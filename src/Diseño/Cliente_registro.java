@@ -331,13 +331,20 @@ public class Cliente_registro extends javax.swing.JFrame {
         try {
             PreparedStatement psd = cn.prepareStatement(sql);
             psd.setInt(1, nce);
+            cedula.setText(null);
             psd.setString(2, nom);
+            nombre.setText(null);
             psd.setString(3, ape);
+            apellido.setText(null);
             psd.setString(4, dir);
+            direccion.setText(null);
             psd.setBoolean(5, modop);
             psd.setString(6, ciu);
+            ciudad.setText(null);
             psd.setString(7, ema);
+            email.setText(null);
             psd.setInt(8, tele);
+            telefono.setText(null);
             
             
             int n=psd.executeUpdate();
