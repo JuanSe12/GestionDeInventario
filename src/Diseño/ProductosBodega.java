@@ -439,8 +439,9 @@ public class ProductosBodega extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
     Conectadb cc = new Conectadb();
     Connection cn = cc.Conectar();
+    String sql2="UPDATE productos SET tipo_producto=?'"+TipoProducto.getSelectedItem()+"',marca_producto=?'"+MarcaProducto.getText()+"',valor_producto_neto=?'"+ValorNetoP.getText()+"',porcentaje_ganancia=?'"+Porcentaje.getText()+"',cnt_producto=?'"+CantidadP.getText()+"' WHERE referencia='"+referencia.getText()+"'";
         try{
-        PreparedStatement sql = cn.preparedStatement("UPDATE productos SET tipo_producto=?'"+TipoProducto.getSelectedItem()+"',marca_producto=?'"+MarcaProducto.getText()+"',valor_producto_neto=?'"+ValorNetoP.getText()+"',porcentaje_ganancia=?'"+Porcentaje.getText()+"',cnt_producto=?'"+CantidadP.getText()+"' WHERE referencia='"+referencia.getText()+"'");
+        PreparedStatement sql = cn.preparedStatement(sql2);
         sql.executeUpdate();
         cargar("");
     } catch (Exception e){
