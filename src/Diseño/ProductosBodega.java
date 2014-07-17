@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+import java.sql.PreparedStatement;
 import java.sql.*;
 
 /**
@@ -441,8 +442,8 @@ public class ProductosBodega extends javax.swing.JFrame {
     Connection cn = cc.Conectar();
     String sql2="UPDATE productos SET tipo_producto=?'"+TipoProducto.getSelectedItem()+"',marca_producto=?'"+MarcaProducto.getText()+"',valor_producto_neto=?'"+ValorNetoP.getText()+"',porcentaje_ganancia=?'"+Porcentaje.getText()+"',cnt_producto=?'"+CantidadP.getText()+"' WHERE referencia='"+referencia.getText()+"'";
         try{
-        PreparedStatement sql = cn.preparedStatement(sql2);
-        sql.executeUpdate();
+        PreparedStatement psd = cn.prepareStatement(sql2);
+        psd.executeUpdate();
         cargar("");
     } catch (Exception e){
         System.out.print(e.getMessage());
