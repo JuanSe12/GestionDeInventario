@@ -453,7 +453,6 @@ public class ProductosBodega extends javax.swing.JFrame {
     String sql="DELETE FROM productos WHERE referencia="+tabla2.getValueAt(fila2, 0).toString();
     Conectadb cc = new Conectadb();
     Connection cn = cc.Conectar();
-    s
         try {
             Statement t = cn.createStatement();
             int dijito = t.executeUpdate(sql);
