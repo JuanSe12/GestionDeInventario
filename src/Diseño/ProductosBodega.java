@@ -70,6 +70,7 @@ public class ProductosBodega extends javax.swing.JFrame {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -111,6 +112,14 @@ public class ProductosBodega extends javax.swing.JFrame {
             }
         });
         jPopupMenu1.add(jMenu1);
+
+        jMenu2.setText("jMenu2");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -414,7 +423,7 @@ public class ProductosBodega extends javax.swing.JFrame {
     }//GEN-LAST:event_buscrefeActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-    int fila = tabla2.getSelectedRow();
+    int fila= tabla2.getSelectedRow();
     if(fila>=0){
         referencia.setText(tabla2.getValueAt(fila, 0).toString());
         TipoProducto.setSelectedItem(tabla2.getValueAt(fila, 1).toString());
@@ -428,13 +437,35 @@ public class ProductosBodega extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-    int fila2= tabla2.getSelectedRow();
-    if(fila2>=0){
-        model.removeRow(fila2);
-    }else{
-        JOptionPane.showMessageDialog(null,"no selecciono un registro o la tabla esta vacia");
+    Conectadb cc = new Conectadb();
+    Connection cn = cc.Conectar();
+        try{
+        PreparedStatement sql = cn.preparedStatement("UPDATE productos SET tipo_producto=?'"+TipoProducto.getSelectedItem()+"',marca_producto=?'"+MarcaProducto.getText()+"',valor_producto_neto=?'"+ValorNetoP.getText()+"',porcentaje_ganancia=?'"+Porcentaje.getText()+"',cnt_producto=?'"+CantidadP.getText()+"' WHERE referencia='"+referencia.getText()+"'");
+        sql.executeUpdate();
+        cargar("");
+    } catch (Exception e){
+        System.out.print(e.getMessage());
     }
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    int fila2 = tabla2.getSelectedRow();
+    String sql="DELETE FROM productos WHERE referencia="+tabla2.getValueAt(fila2, 0).toString();
+    Conectadb cc = new Conectadb();
+    Connection cn = cc.Conectar();
+    s
+        try {
+            Statement t = cn.createStatement();
+            int dijito = t.executeUpdate(sql);
+            if(dijito>=0){
+                cargar("");
+                JOptionPane.showMessageDialog(null,"Datos Eliminados Con Exito");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductosBodega.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -495,6 +526,7 @@ public class ProductosBodega extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
