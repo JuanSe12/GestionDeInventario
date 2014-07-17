@@ -425,9 +425,10 @@ public class ProductosBodega extends javax.swing.JFrame {
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
     int fila= tabla2.getSelectedRow();
+    
     if(fila>=0){
         referencia.setText(tabla2.getValueAt(fila, 0).toString());
-        TipoProducto.setSelectedItem(tabla2.getValueAt(fila, 1).toString());
+        TipoProducto.setSelectedItem(tabla2.getValueAt(fila, 1));
         MarcaProducto.setText(tabla2.getValueAt(fila, 2).toString());
         ValorNetoP.setText(tabla2.getValueAt(fila, 3).toString());
         Porcentaje.setText(tabla2.getValueAt(fila, 4).toString());
@@ -451,8 +452,8 @@ public class ProductosBodega extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-    int fila2 = tabla2.getSelectedRow();
-    String sql="DELETE FROM productos WHERE referencia="+tabla2.getValueAt(fila2, 0).toString();
+    int fila = tabla2.getSelectedRow();
+    String sql="DELETE FROM productos WHERE referencia="+tabla2.getValueAt(fila, 0);
     Conectadb cc = new Conectadb();
     Connection cn = cc.Conectar();
         try {
