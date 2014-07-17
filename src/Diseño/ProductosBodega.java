@@ -70,8 +70,8 @@ public class ProductosBodega extends javax.swing.JFrame {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -85,7 +85,6 @@ public class ProductosBodega extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         ValorNetoP = new javax.swing.JTextField();
-        TipoProducto = new javax.swing.JComboBox();
         MarcaProducto = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -105,22 +104,23 @@ public class ProductosBodega extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
+        TipoProducto = new javax.swing.JComboBox();
 
-        jMenu1.setText("modificar");
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem1.setText("Modificar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
-        jPopupMenu1.add(jMenu1);
+        jPopupMenu1.add(jMenuItem1);
 
-        jMenu2.setText("jMenu2");
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem2.setText("Eliminar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
-        jPopupMenu1.add(jMenu2);
+        jPopupMenu1.add(jMenuItem2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,6 +149,8 @@ public class ProductosBodega extends javax.swing.JFrame {
 
         jButton4.setText("Retiro");
 
+        jScrollPane1.setComponentPopupMenu(jPopupMenu1);
+
         tabla2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -168,9 +170,6 @@ public class ProductosBodega extends javax.swing.JFrame {
         jLabel7.setText("Referencia:");
 
         ValorNetoP.setBackground(new java.awt.Color(233, 204, 175));
-
-        TipoProducto.setBackground(new java.awt.Color(233, 204, 175));
-        TipoProducto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Camisa", "Zapatos", "Pantalones", "Birretes", "Blusas" }));
 
         MarcaProducto.setBackground(new java.awt.Color(233, 204, 175));
         MarcaProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +210,11 @@ public class ProductosBodega extends javax.swing.JFrame {
         jLabel9.setText("Opciones:");
 
         jButton1.setText("Actualizar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Eliminar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -275,6 +279,8 @@ public class ProductosBodega extends javax.swing.JFrame {
             .addGap(0, 305, Short.MAX_VALUE)
         );
 
+        TipoProducto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Camisa", "Zapatos", "Jeans", "Blusa", "Pantaloneta" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -310,23 +316,21 @@ public class ProductosBodega extends javax.swing.JFrame {
                                             .addComponent(jLabel8))
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addGap(14, 14, 14)
-                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(referencia, javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(TipoProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(MarcaProducto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(ValorNetoP, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(CantidadP, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(Porcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                    .addComponent(Porcentaje, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(ValorNetoP, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(14, 14, 14)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                    .addComponent(referencia, javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(MarcaProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                                                    .addComponent(TipoProducto, 0, 1, Short.MAX_VALUE)))))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(20, 20, 20)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -423,7 +427,30 @@ public class ProductosBodega extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buscrefeActionPerformed
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    int fila = tabla2.getSelectedRow();
+    String sql="DELETE FROM productos WHERE referencia='"+tabla2.getValueAt(fila, 0).toString()+"'";
+    Conectadb cc = new Conectadb();
+    Connection cn = cc.Conectar();
+        try {
+            Statement t = cn.createStatement();
+            referencia.setText(null);
+            TipoProducto.setSelectedItem(null);
+            MarcaProducto.setText(null);
+            ValorNetoP.setText(null);
+            Porcentaje.setText(null);
+            CantidadP.setText(null);
+            int dijito = t.executeUpdate(sql);
+            if(dijito>=0){
+                cargar("");
+                JOptionPane.showMessageDialog(null,"Datos Eliminados Con Exito");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductosBodega.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
     int fila= tabla2.getSelectedRow();
     
     if(fila>=0){
@@ -436,28 +463,69 @@ public class ProductosBodega extends javax.swing.JFrame {
     }else{
         JOptionPane.showMessageDialog(null,"no selecciono un registro");
     }
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     Conectadb cc = new Conectadb();
     Connection cn = cc.Conectar();
-    String sql2="UPDATE productos SET tipo_producto=?'"+TipoProducto.getSelectedItem()+"',marca_producto=?'"+MarcaProducto.getText()+"',valor_producto_neto=?'"+ValorNetoP.getText()+"',porcentaje_ganancia=?'"+Porcentaje.getText()+"',cnt_producto=?'"+CantidadP.getText()+"' WHERE referencia='"+referencia.getText()+"'";
+    String ref;
+    Object tipopro;
+    
+    String marcapro;
+    String valnetpro;
+    String pganancia;
+    String cantidadpro;
+    String sql="";
+    
+    ref = referencia.getText();
+    tipopro = TipoProducto.getSelectedItem();
+    String tip = tipopro.toString();
+    marcapro = MarcaProducto.getText();
+    valnetpro = ValorNetoP.getText();
+    int valnet = Integer.parseInt(valnetpro);
+    pganancia = Porcentaje.getText();
+    int pg = Integer.parseInt(pganancia);
+    cantidadpro = CantidadP.getText();
+    int cp = Integer.parseInt(cantidadpro);
+    sql="UPDATE productos SET tipo_producto=?,marca_producto=?,valor_producto_neto=?,porcentaje_ganancia=?,cnt_producto=? WHERE referencia=?";
         try{
-        PreparedStatement psd = cn.prepareStatement(sql2);
-        psd.executeUpdate();
-        cargar("");
+        PreparedStatement psd = cn.prepareStatement(sql);
+        psd.setString(1,tip);
+        TipoProducto.setSelectedItem(null);
+        psd.setString(2,marcapro);
+        MarcaProducto.setText(null);
+        psd.setInt(3, valnet);
+        ValorNetoP.setText(null);
+        psd.setInt(4, pg);
+        Porcentaje.setText(null);
+        psd.setInt(5,cp);
+        CantidadP.setText(null);
+        psd.setString(6,ref);
+        referencia.setText(null);
+        int n=psd.executeUpdate();
+        if(n>0){
+            cargar("");
+            JOptionPane.showMessageDialog(null,"Datos Modificados Con Exito");
+        }
     } catch (Exception e){
         System.out.print(e.getMessage());
     }
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
     int fila = tabla2.getSelectedRow();
-    String sql="DELETE FROM productos WHERE referencia="+tabla2.getValueAt(fila, 0);
+    String sql="DELETE FROM productos WHERE referencia='"+tabla2.getValueAt(fila, 0).toString()+"'";
     Conectadb cc = new Conectadb();
     Connection cn = cc.Conectar();
         try {
             Statement t = cn.createStatement();
+            referencia.setText(null);
+            TipoProducto.setSelectedItem(null);
+            MarcaProducto.setText(null);
+            ValorNetoP.setText(null);
+            Porcentaje.setText(null);
+            CantidadP.setText(null);
+            
             int dijito = t.executeUpdate(sql);
             if(dijito>=0){
                 cargar("");
@@ -466,8 +534,7 @@ public class ProductosBodega extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(ProductosBodega.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
-    }//GEN-LAST:event_jMenu2ActionPerformed
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -527,8 +594,8 @@ public class ProductosBodega extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
